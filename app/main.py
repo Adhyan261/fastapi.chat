@@ -1,6 +1,7 @@
 from pickle import NONE
 import tkinter
-import tkinter
+import _tkinter
+import tk
 from turtle import title
 from fastapi import FastAPI
 from random import randrange
@@ -31,7 +32,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"message": "Helloo"}
+    return {"message": "Hellooo"}
 
 
 
