@@ -1,15 +1,14 @@
 from pickle import NONE
-import tkinter
-import _tkinter
-import tk
 from turtle import title
 from fastapi import FastAPI
+FastAPI.use('Agg')
 from random import randrange
 from . import models
 from .database import engine
 from .routers import user,post,auth,vote
 from .config import settings
 from fastapi.middleware.cors import CORSMiddleware
+
 
 models.Base.metadata.create_all(bind=engine)
 
